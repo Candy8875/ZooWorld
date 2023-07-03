@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model categories {
+  id       Int        @id @default(autoincrement())
+  name     String     @db.VarChar(1000)
+  products products[]
+}
+
+model order_lines {
+  id         Int      @id @default(autoincrement())
+  order_id   Int
+  product_id Int
+  quantity   Int
+  orders     orders   @relation(fields: [order_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "order_id")
+  products   products @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "product_id")
+
+  @@index([order_id], map: "order_id_idx")
+  @@index([product_id], map: "product_id")
+}
+
+model orders {
+  id          Int           @id @default(autoincrement())
+  fio         String        @db.VarChar(1000)
+  email       String        @db.VarChar(1000)
+  tel         String        @db.VarChar(1000)
+  adress      String        @db.VarChar(1000)
+  order_lines order_lines[]
+}
+
+model products {
+  id          Int           @id @default(autoincrement())
+  name        String        @db.VarChar(1000)
+  price       Decimal       @db.Decimal(10, 0)
+  description String?       @db.VarChar(1000)
+  image_path  String?       @db.VarChar(1000)
+  category_id Int
+  order_lines order_lines[]
+  categories  categories    @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "category_id")
+
+  @@index([category_id], map: "category_id_idx")
+}
+
+model record {
+  id                   Int      @id @default(autoincrement())
+  fio                  String   @db.VarChar(1000)
+  tel                  String   @db.VarChar(20)
+  email                String   @db.VarChar(1000)
+  reason_for_recording String   @db.VarChar(1000)
+  Date                 DateTime @db.Date
+}
+
+model users {
+  id              Int    @id @default(autoincrement())
+  email           String @db.VarChar(500)
+  hashed_password String @db.VarChar(1000)
+  salt            String @db.VarChar(1000)
+}

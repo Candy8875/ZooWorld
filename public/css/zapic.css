@@ -1,0 +1,169 @@
+body {
+    font-family: 'Inter';
+    background-color: #F3F3F3;
+}
+
+/*button*/
+.button-form {
+    margin: 0 auto;
+    justify-content: center;
+    border: none;
+    outline: none;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    background-color: #C062D3;
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 22px 122px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.button-form:hover {
+    transition: all.6s ease;
+    color: black;
+}
+button:active, button:focus {
+    outline: none;
+}
+
+/*scroll*/
+#scroll-top {
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+}
+  
+#scroll-top button {
+    position: relative;
+    overflow: hidden;
+    height: 48px;
+    width: 48px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    background: #DDA4E8;
+    transition: width 0.5s;
+    border-radius: 100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+  
+#scroll-top button span {
+    display: inline-block;
+    transition: opacity 0.3s ease 0s, transform 0.5s ease 0s;
+    line-height: 48px;
+    font-size: 20px;
+    width: 100%;
+}
+  
+#scroll-top button span::before {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 200%;
+    opacity: 0;
+    content: attr(data-hover);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+  
+#scroll-top:hover button {
+    width: 120px;
+    background: #9b59b6;
+}
+  
+#scroll-top:hover button span {
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+  
+#scroll-top:hover button span:before {
+    opacity: 1;
+}
+  
+#scroll-top button:active {
+    background: #DDA4E8;
+}
+
+.form-zap {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+/*rectangle-form*/
+.rectangle-form-glav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #C062D3;
+    width: 301px;
+    height: 433px;
+    border-radius: 20px;
+}
+.rectangle-form {
+    justify-content: center;
+    color: #b0b0b0;
+    font-size: 14px;
+    margin-top: 10px;
+    display: flex;
+    background-color: white;
+    width: 266px;
+    height: 54px;
+    border-radius: 20px;
+}
+
+h1 {
+    margin-top: 24px;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+/*forms*/
+.kont-danns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 10px;
+}
+.kont-dann-1 {
+    width: 250px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: top;
+}
+
+
+/*input*/
+.form-dan {
+    height: 30px;
+    border: 1px solid white;
+    background-color: white;
+    display: inline-block;
+    border-radius: 20px;
+}
+.form-dan::placeholder {
+    color: #212529;
+    opacity: 0.4;
+    padding-left: 5px;
+}
+
+.text-dan {
+    font-size: 16px;
+    color: #2e2e2e;
+}
+select {
+    width: 150px;
+}

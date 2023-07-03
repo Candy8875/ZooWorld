@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/reg.css">
+  <link href="../img/paw.png" rel="shortut icon" type="img/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&display=swap" rel="stylesheet">
+  <title>Регистрация</title>
+</head>
+
+<body>
+    <div class="form">
+        <p class="error-Message"><%= errorMessage %></p>
+        <h1>Войдите</h1>
+        <h2>И получите доступ ко всем</h2>
+        <h2>функциям сайта</h2>
+        <form action="/login/password" method="post" class="input-form">
+            <input name="username" class="form-reg" type="email" placeholder="Введите ваш email">
+            <input name="password" class="form-reg" type="password" maxlength="30" placeholder="Введите пароль">
+            <button type="submit" class="button-form">Войти</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+body{
+    background-color: #F3F3F3;
+    text-decoration: none;
+    font-family: 'Inter';
+}
+
+h1 {
+    margin-top: 24px;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+/*cart-class*/
+.pok {
+    display: flex;
+    flex-direction: column;
+}
+.cart-tovars {
+    margin-left: 10px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.opic-tovar {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.buttons-cart-tovars {
+    margin-top: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*button*/
+.button-cart-tov {
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    border: none;
+    outline: none;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    background-color: #C062D3;
+    border-radius: 20px;
+    margin-top: 15px;
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+}
+.button-cart-tov:hover {
+    transition: all.6s ease;
+    color: black;
+}
+
+.cart-opic {
+    font-size: 12px;
+    color: #5f5f5f;
+}
+
+.cart-cen {
+    margin-top: 35px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.empty {
+    font-size: 30px;
+    margin-top: 60px;
+    display: inline-block;
+    text-align: center;
+}
+.empty-1 {
+    font-size: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+/*delete-button*/
+.delete-button {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/icons/delete.png);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*plus-minus-tovars*/
+.minus-plus {
+    display: flex;
+}
+
+.minus, .plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-weight: 600;
+    color: #757575;
+    background-color: #C7C7C7;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.product-quantity {
+    max-width: 55px;
+    text-align: center;
+    font-weight: 700;
+    background-color: #E5E5E5;
+    border: none;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+
+/*scroll*/
+#scroll-top {
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+}
+  
+#scroll-top button {
+    position: relative;
+    overflow: hidden;
+    height: 48px;
+    width: 48px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    background: #DDA4E8;
+    transition: width 0.5s;
+    border-radius: 100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+  
+#scroll-top button span {
+    display: inline-block;
+    transition: opacity 0.3s ease 0s, transform 0.5s ease 0s;
+    line-height: 48px;
+    font-size: 20px;
+    width: 100%;
+}
+  
+#scroll-top button span::before {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 200%;
+    opacity: 0;
+    content: attr(data-hover);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+  
+#scroll-top:hover button {
+    width: 120px;
+    background: #9b59b6;
+}
+  
+#scroll-top:hover button span {
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+  
+#scroll-top:hover button span:before {
+    opacity: 1;
+}
+  
+#scroll-top button:active {
+    background: #DDA4E8;
+}
+
+/*forms*/
+.form-oform {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 10px;
+}
+.form-oform-1 {
+    width: 250px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: top;
+}
+
+/*input*/
+.form-ofor {
+    height: 30px;
+    border: 1px solid white;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.form-ofor::placeholder {
+    color: #212529;
+    opacity: 0.4;
+    padding-left: 5px;
+}
+
+.text-dan {
+    font-size: 16px;
+}
+select {
+    width: 150px;
+}
+
+.of {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.for {
+    margin-top: 160px;
+    margin-left: 10px;
+}
+
+.oform_tovars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.total-price {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}

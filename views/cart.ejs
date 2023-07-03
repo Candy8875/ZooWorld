@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style_nach.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link href="img/paw.png" rel="shortut icon" type="img/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&display=swap" rel="stylesheet">
+  <title>ZooWorld</title>
+</head>
+
+<body>
+
+<%- include('header', {user, page}) %>
+<div class="cart">
+    <h1>Корзина</h1>
+    <hr noshade width="25%" size="4" color="black">
+    <div class="pok">
+        
+        <% if(cart?.length) { %>
+            <% cart.forEach(function(cartItem) { %>
+                <div class="oform_cart_tovar">
+                <div class="cart-tovars">
+                    <img src="<%= cartItem.product.image_path %>">
+                    <div class="opic-tovar">
+                        <label class="cart-opic" name="product_id"><%= cartItem.product.name %> <br> 
+                            <%= cartItem.product.description %></label>
+                        <label class="cart-cen"><%= cartItem.product.price %> руб.</label>
+                        <div class="buttons-cart-tovars">
+                            <div class="minus-plus">
+                                <span class="change minus min">
+                                    <span>-</span>
+                                </span>
+                                <input data-productid="<%= cartItem.product.id %>" name="quantity" type="text" class="product-quantity" value="<%= cartItem.quantity %>" disabled="">
+                                <span class="change plus">
+                                    <span>+</span>
+                                </span>
+                            </div>
+                            <form action="/remove_cart" method="post">
+                                <input type="hidden" name="id" value="<%= cartItem.product.id %>">
+                               <button type="submit" class="delete-button"></button> 
+                            </form>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <% }); %>
+            <% var totalPrice = cart.map(x => x.product.price * x.quantity).reduce((prevValue, currentValue) => prevValue + currentValue); %>
+            <div class="total-price">Итого: <span id="total-price" name="price"> <%= totalPrice %> </span> руб.</div>
+            <div class="oform_tovars">
+                <h1 class="for">Оформление товара</h1>
+                <hr noshade width="25%" size="4" color="black">
+                <p class="of">Контактные данные</p>
+                <div class="form-oform">
+                    <div class="form-oform-1">
+                    <div class="text-dan">ФИО: </div>
+                    <input type="text" class="form-ofor" name="fio" id="fio" placeholder="Введите своё ФИО" size="17">
+                  </div>
+                  <div class="form-oform-1">
+                    <div class="text-dan">e-mail: </div>
+                    <input type="email" class="form-ofor" name="email" id="email" placeholder="Введите свой e-mail" size="17">
+                  </div>
+                  <div class="form-oform-1">
+                    <div class="text-dan">Номер телефона: </div>
+                    <input type="tel" class="form-ofor" name="tel" id="nomer" placeholder="Введите свой номер" size="17">
+                  </div>
+                  <div class="form-oform-1">
+                    <div class="text-dan">Адрес: </div>
+                    <input type="text" class="form-ofor" name="adress" id="adress" placeholder="Введите свой адрес" size="17">
+                  </div>
+                </div>
+            </div>
+        <button id="createOrder" class="button-cart-tov">Оформить заказ</button>
+        
+        <% } else { %> 
+            <p class="empty">Ваша корзина пока пуста.</p>
+            <p class="empty-1">Скорее положите  в неё что-нибудь!</p>
+        <% } %>
+    
+</div>
+<%- include('footer', {page}) %>
+  
+   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+   <script src="js/scroll.js"></script>
+</body>
+</html>

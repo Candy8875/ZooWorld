@@ -1,0 +1,38 @@
+<header>
+    <div class="head-logo">
+      <div class="logo-img"> <a href="/" title="На главную страницу"><img src="img/icons/logo.png" alt=""></a></div>
+     <div class="head-logo-block">
+      <div class="logo-text1"><a href="/" title="На главную страницу">ZooWorld </a></div>
+      <div class="logo-text2"><a href="/" title="На главную страницу">Ветеринарная клиника</a></div>
+    </div>
+    </div>  
+
+    <div class="nav">
+      <% if(page != "services") { %>
+      <a class="nav-items" href="/services" id="uslygi"> Услуги </a>
+      <% } %> 
+      <% if(page != "catalog") { %>
+      <a class="nav-items" href="/catalog" id="katalog"> Каталог товаров </a> 
+      <% } %>
+      <a class="nav-items" href="<%= page != "index" ? "/" : "#aci" %>" id="akcii"> Акции </a> 
+      <a class="nav-items" href="<%= page != "index" ? "/" : "#aboutwe" %>" id="about"> О нас </a>
+    </div>
+  <div class="container-right">
+    <div class="righ">
+      <a href="/cart"><img src="img/icons/trash.png"></a>
+      <p class="quantity-count"><%= productsCount %></p>
+    </div>
+    <div class="vr">
+      <% if(user) { %>
+        <p class="p-name"><%= user.username %> </p>
+        <form action="/logout" method="post">
+          <button class="button-logout" type="submit">Выход</button>
+        </form>
+    <% } else{ %>
+      <div class="vr-text"> Вход/Регистрация</div>
+      <div class="reg"><a href="/signup"><img src="img/icons/reg.png"></a></div>
+      <div class="vxod"><a href="/login"><img src="img/icons/vxod.png"></a></div>  
+    <% } %> 
+    </div> 
+  </div> 
+</header>

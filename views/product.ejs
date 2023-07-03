@@ -1,0 +1,14 @@
+<div class="tovar">
+    <img src="<%= product.image_path %>">
+    <div class="tov-op">
+    <div class="label-tov">
+       <p> <%= product.name %></p>
+       <p> <%= product.description %></p>
+    </div>
+        <label class="label-tov-cen"><%= product.price %> руб</label>
+        <form action="/add_cart" method="post">
+            <input type="hidden" name="id" value="<%= product.id %>">
+            <button type="submit" class="button-tov">В корзину</button>
+        </form>
+    </div>
+</div>

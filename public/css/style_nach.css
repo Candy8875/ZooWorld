@@ -1,0 +1,183 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+}
+
+.quantity-count {
+    margin-top: 20px;
+    margin-left: 5px;
+    color: #C062D3;
+}
+
+/* selection */
+::selection {background: #C062D3; color: #ffffff;}
+
+header, footer {
+    width: 98%;
+    background-color: #EDEDED;
+}
+header {
+    padding: 1%;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+} 
+/*footer*/
+footer {
+    padding: 1%;
+    margin-top: 50px;
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navs {
+    margin-left: 141px;
+    font-size: 14px;
+}
+.block {
+    display: block;
+}
+.vet {
+    margin-top: 26px;
+    font-size: 12px;
+}
+.nav-item {
+    display: flex;
+    padding-top: 20px;
+}
+.cont {
+    margin-left: 118px;
+}
+.text_cont {
+    font-size: 20px;
+}
+#jirt {
+    margin-top: 20px;
+}
+.jir{
+    font-size: 12px;
+    margin-top: 7px;
+}
+.ob {
+    font-size: 12px;
+    margin-top: 2px;
+}
+.sociality {
+    display: flex;
+}
+.vk {
+    margin-left: 9px;
+}
+
+/* links*/
+a:hover {
+    color: #C062D3;
+    text-decoration: none;
+    transition: all.6s ease;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+.container-right {
+    display: flex;
+    align-items: center;
+}
+
+
+/* logo*/
+.head-logo {
+    display: flex;
+    align-items: center;
+}
+.head-logo-block {
+    display: flex; 
+    flex-direction: column;
+}
+.logo-text1 a{
+    font-size: 30px;
+    color: #C062D3;
+    margin-left: 5px;
+}
+.logo-text2 a {
+    font-size: 12px;
+    color: #777;
+}
+.head-logo-block a:hover{color: #438ADE;}
+
+/* navigation*/
+.nav {
+    margin-left: 28px;
+}
+.nav-items {
+    margin-right: 20px;
+    transition: color 0.3s linear;
+}
+#uslygi, #katalog, #akcii {
+    border-right: 2px solid #000;
+    padding-right: 10px;
+}
+#akcii {
+    font-size: 16px;
+} 
+#uslygi, #katalog {
+    font-size: 16px;
+}
+
+
+/* number*/
+.righ {
+    display: flex;
+    align-items: center;
+    margin-left: 75px;
+}
+.number {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+/* vxod and reg*/
+.vr {
+    display: flex;
+    align-items: center;
+    margin-left: 52px;
+}
+.reg, .vxod {
+    margin-left: 20px;
+    font-size: 14px;
+}
+.reg:hover, .vxod:hover {
+    border-bottom: 3px solid #C062D3;
+}
+
+/*login and reg*/
+.p-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #C062D3;;
+}
+
+.button-logout {
+    margin-left: 20px;
+    display: inline-block;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #C062D3;
+    border-radius: 20px;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.button-logout:hover {
+    transition: all .6s ease;
+    color: black;
+}

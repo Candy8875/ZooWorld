@@ -1,0 +1,49 @@
+<div id="scroll-top">
+    <button><span data-hover="Наверх"><img src="img/icons/up-arrow (1).png"></span></button>
+</div>
+  
+  
+   <footer>
+      <div class="block">
+        <div class="head-logo">
+          <div class="logo-img"> <a href="/" title="На главную страницу"><img src="img/icons/logo.png" alt=""></a></div>
+         <div class="head-logo-block">
+          <div class="logo-text1"><a href="/" title="На главную страницу">ZooWorld </a></div>
+          <div class="logo-text2"><a href="/" title="На главную страницу">Ветеринарная клиника</a></div>
+        </div>
+        </div>  
+  
+      <div class="vet"> Ветеринарная клиника «ZooWorld» <br>
+        Ветеринарные услуги и товары для животных</div>
+      </div>
+  
+        <div class="navs">
+          <% if(page != "services") { %>
+          <a class="nav-item" href="/services" id="uslyg"> Услуги </a> <br>
+          <% } %>
+          <% if(page != "catalog") { %> 
+          <a class="nav-item" href="/catalog" id="katalogt"> Каталог товаров </a> <br>
+          <% } %>
+          <a class="nav-items" href="<%= page != "index" ? "/" : "#aci" %>" id="aci"> Акции </a> <br>
+          <a class="nav-items" href="<%= page != "index" ? "/" : "#aboutwe" %>" id="about"> О нас </a>
+          
+        </div>
+  
+    <div class="cont">
+      <div class="text_cont"> Наши контакты:<br></div> 
+      <div class="jir" id="jirt"><b>Телефон:</b></div><br>
+       <div class="ob"> 8(800)243-53-22</div><br>
+       <div class="jir"><b>E-mail:</b></div><br>
+       <div class="ob">zooworld_klin@gmail.com</div><br>
+       <div class="jir"> <b>Наш адрес:</b></div><br>
+       <div class="ob">г. Кострома, улица Центральная, дом 13/5</div><br>
+       <div class="jir"><b>Мы в соцсетях:</b></div> <br>
+       <div class="sociality">
+       <div class="facebook"><a href="#"><img src="img/icons/facebook 1.png"></a></div> 
+       <div class="vk"><a href="#"><img src="img/icons/vk 1.png"></a></div> 
+      </div> 
+    </div>
+  
+    <div class="paws"><img src="img/icons/paws (1) 1.png"></div>
+  </div>
+  </footer>

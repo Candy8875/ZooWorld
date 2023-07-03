@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style_nach.css">
+  <link rel="stylesheet" href="css/uslugi.css">
+  <link href="img/paw.png" rel="shortut icon" type="img/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&display=swap" rel="stylesheet">
+  <title>Услуги</title>
+</head>
+
+<body>
+    <%- include('header', {user, page}) %>
+
+<div id="vnutr-us">
+<h1>Ветеринарные услуги</h1>
+<hr noshade width="25%" size="4" color="black">
+    <div class="uslug-block">
+        <div class="blocks-uss">
+            <div class="block-us">
+                <img src="img/uslugi/к 1.png">
+                <h2>Консультация ветеринара</h2>
+                <a class="button" type="button" href="/record">Записаться на приём</a>
+            </div>
+            <div class="block-us">
+                <img src="img/uslugi/с 1.png">
+                <h2>Терапия</h2>
+                <a class="button" type="button" href="/record">Записаться на приём</a>
+            </div>
+            <div class="block-us">
+                <img src="img/uslugi/х 1.png">
+                <h2>Хирургия</h2>
+                <a class="button" type="button" href="/record">Записаться на приём</a>
+            </div>
+        </div>    
+        <div class="blocks-uss-2">
+            <div class="block-us">
+                <img src="img/uslugi/image 5.png">
+                <h2>Вакцинация</h2>
+                <a class="button" type="button" href="/record">Записаться на приём</a>
+            </div>
+            <div class="block-us">
+                <img src="img/uslugi/image 8.png">
+                <h2>Стрижка</h2>
+                <a class="button" type="button" href="/record">Записаться на приём</a>
+            </div>
+            <div class="block-us">
+                <img src="img/uslugi/image 9.png">
+                <h2>Прочие услуги</h2>
+                <a class="button" type="button" href="/record">Записаться на приём</a>
+            </div>
+        </div>  
+    </div>
+</div>
+
+<%- include('footer', {page}) %>
+  
+   <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+   <script src="js/scroll.js"></script>
+</body>
+</html>

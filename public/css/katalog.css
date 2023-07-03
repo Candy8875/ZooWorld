@@ -1,0 +1,140 @@
+body{
+    background-color: #F3F3F3;
+    text-decoration: none;
+    font-family: 'Inter';
+}
+
+h1 {
+    margin-top: 24px;
+    font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+/*tovars*/
+.tov {
+    margin-top: 70px;
+}
+.tov-op {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.label-tovars {
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.vnutr-tov {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tovar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.label-tov {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.label-tov-cen {
+    font-size: 20px;
+    color: #438ADE;
+}
+
+/*button*/
+.button-tov {
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    border: none;
+    outline: none;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 15px;
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+}
+.button-tov:hover {
+    background-color: #C062D3;
+    transition: all.6s ease;
+    color: white;
+}
+
+/*scroll*/
+#scroll-top {
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+}
+  
+#scroll-top button {
+    position: relative;
+    overflow: hidden;
+    height: 48px;
+    width: 48px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    background: #DDA4E8;
+    transition: width 0.5s;
+    border-radius: 100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+  
+#scroll-top button span {
+    display: inline-block;
+    transition: opacity 0.3s ease 0s, transform 0.5s ease 0s;
+    line-height: 48px;
+    font-size: 20px;
+    width: 100%;
+}
+  
+#scroll-top button span::before {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 200%;
+    opacity: 0;
+    content: attr(data-hover);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+  
+#scroll-top:hover button {
+    width: 120px;
+    background: #9b59b6;
+}
+  
+#scroll-top:hover button span {
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+  
+#scroll-top:hover button span:before {
+    opacity: 1;
+}
+  
+#scroll-top button:active {
+    background: #DDA4E8;
+}
